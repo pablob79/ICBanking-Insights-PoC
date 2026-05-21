@@ -1,0 +1,105 @@
+{
+  "version": "0.2.0",
+  "description": "Mock BackOffice configuration for ICBanking Insights PoC (synthetic data only)",
+  "segments": ["retail", "pyme", "corporate"],
+  "channels": ["mobile", "web"],
+  "scenarios": [
+    {"id": "savings_goal", "label": "Savings goal", "segments": ["retail"]},
+    {"id": "spending_alert", "label": "Spending alert", "segments": ["retail"]},
+    {"id": "lending", "label": "Lending", "segments": ["retail"]},
+    {"id": "notifications", "label": "Push notifications", "segments": ["retail"]},
+    {"id": "access_review", "label": "Access review", "segments": ["retail"]},
+    {"id": "payments", "label": "QR payments", "segments": ["retail"]},
+    {"id": "cash_management", "label": "Cash management", "segments": ["retail"]},
+    {"id": "autopay", "label": "Automatic bill pay", "segments": ["retail"]},
+    {"id": "invoicing", "label": "AFIP invoicing", "segments": ["pyme"]},
+    {"id": "collections", "label": "Payment links", "segments": ["pyme"]},
+    {"id": "duplicate_payments", "label": "Duplicate payments", "segments": ["pyme"]},
+    {"id": "payroll", "label": "Digital payroll", "segments": ["pyme"]},
+    {"id": "credentials", "label": "Operator credentials", "segments": ["pyme"]},
+    {"id": "working_capital", "label": "Working capital", "segments": ["pyme"]},
+    {"id": "reconciliation", "label": "ERP reconciliation", "segments": ["pyme"]},
+    {"id": "portal_update", "label": "PyME portal update", "segments": ["pyme"]},
+    {"id": "relationship", "label": "Relationship manager", "segments": ["pyme"]},
+    {"id": "bulk_payments", "label": "Bulk payments", "segments": ["corporate"]},
+    {"id": "liquidity", "label": "Treasury liquidity", "segments": ["corporate"]},
+    {"id": "fx", "label": "Foreign exchange", "segments": ["corporate"]},
+    {"id": "signers", "label": "Signer permissions", "segments": ["corporate"]},
+    {"id": "api_integration", "label": "Payments API", "segments": ["corporate"]},
+    {"id": "esg_reporting", "label": "ESG reporting", "segments": ["corporate"]},
+    {"id": "limits", "label": "Operational limits", "segments": ["corporate"]}
+  ],
+  "frequencyCaps": {
+    "global": {
+      "maxRecommendationsPerRequest": 5,
+      "defaultRecommendationsPerRequest": 3
+    },
+    "perUser": {
+      "maxImpressionsPerDay": 12,
+      "maxImpressionsPerWeek": 40,
+      "maxSameScenarioPerWeek": 3
+    },
+    "perChannel": {
+      "mobile": {"maxImpressionsPerDay": 8},
+      "web": {"maxImpressionsPerDay": 10}
+    },
+    "perSegment": {
+      "retail": {"maxImpressionsPerDay": 10},
+      "pyme": {"maxImpressionsPerDay": 10},
+      "corporate": {"maxImpressionsPerDay": 8}
+    }
+  },
+  "allowedItemTypes": [
+    "financial_insight",
+    "product_offer",
+    "adoption_action",
+    "security_recommendation",
+    "operational_recommendation",
+    "novelty"
+  ],
+  "eventWeights": {
+    "view": 1,
+    "click": 3,
+    "start_flow": 4,
+    "conversion": 5,
+    "dismiss": -1,
+    "not_interested": -3
+  },
+  "allowedEvents": [
+    "view",
+    "click",
+    "start_flow",
+    "conversion",
+    "dismiss",
+    "not_interested"
+  ],
+  "demoUsers": [
+    {
+      "userId": "U001",
+      "label": "Retail — mobile",
+      "segment": "retail",
+      "channel": "mobile",
+      "country": "AR"
+    },
+    {
+      "userId": "U009",
+      "label": "PyME — web",
+      "segment": "pyme",
+      "channel": "web",
+      "country": "AR"
+    },
+    {
+      "userId": "U011",
+      "label": "Corporate — web",
+      "segment": "corporate",
+      "channel": "web",
+      "country": "AR"
+    }
+  ],
+  "priorityOverrides": [],
+  "featureFlags": {
+    "enableLightfmRanking": true,
+    "enableEventTracking": true,
+    "enableBusinessRules": true
+  }
+}

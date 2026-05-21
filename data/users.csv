@@ -1,0 +1,16 @@
+user_id,segment,country,preferred_channel,uses_mobile_app,uses_web,has_push_enabled,has_mfa_enabled,manual_transfers_month,risk_profile,digital_adoption_score,has_payroll_product,has_treasury_module,company_size_employees
+U001,retail,AR,mobile,true,false,true,true,3,low,72,false,false,
+U002,retail,AR,web,false,true,false,true,8,medium,45,false,false,
+U003,retail,CL,mobile,true,true,true,true,12,low,88,true,false,
+U004,retail,AR,mobile,true,false,true,false,25,high,35,false,false,
+U005,retail,UY,web,false,true,false,true,2,low,61,false,false,
+U006,pyme,AR,mobile,true,false,true,true,15,medium,58,false,true,12
+U007,pyme,AR,web,false,true,false,false,4,low,41,false,false,8
+U008,pyme,CL,mobile,true,true,true,true,22,medium,67,true,true,25
+U009,pyme,AR,web,false,true,true,true,9,medium,52,false,true,18
+U010,pyme,UY,mobile,true,false,true,true,18,low,74,true,true,35
+U011,corporate,AR,web,false,true,true,true,45,low,82,false,false,450
+U012,corporate,CL,web,false,true,true,true,60,medium,69,false,true,1200
+U013,corporate,AR,web,false,true,true,true,80,low,91,true,true,3200
+U014,corporate,UY,web,false,true,false,true,30,medium,55,false,true,890
+U015,corporate,AR,web,false,true,true,true,55,low,77,true,true,2100

@@ -1,0 +1,25 @@
+item_id,title,type,scenario,segments,channels,priority_base,min_digital_adoption,requires_payroll,requires_treasury
+I001,Ahorro automático desde tu sueldo,financial_insight,savings_goal,"retail","mobile,web",80,0,false,false
+I002,Tu gasto en suscripciones subió 18%,financial_insight,spending_alert,"retail","mobile,web",75,40,false,false
+I003,Preaprobado: préstamo personal hasta $500.000,product_offer,lending,"retail","mobile,web",70,30,false,false
+I004,Activá alertas de movimientos en tiempo real,adoption_action,notifications,"retail","mobile",85,20,false,false
+I005,Revisá accesos recientes a Home Banking,security_recommendation,access_review,"retail","web",90,0,false,false
+I006,Nueva función: pagar con QR en comercios,novelty,payments,"retail","mobile",60,50,false,false
+I007,Optimizá saldo ocioso en cuenta remunerada,operational_recommendation,cash_management,"retail","web",65,55,false,false
+I008,Facturá en AFIP desde la app PyME,adoption_action,invoicing,"pyme","mobile,web",88,35,false,false
+I009,Concentrá cobros con link de pago,product_offer,collections,"pyme","mobile,web",82,45,false,false
+I010,Detectamos pagos duplicados a proveedores,financial_insight,duplicate_payments,"pyme","web",78,50,false,false
+I011,Contratá nómina digital sin papel,adoption_action,payroll,"pyme","mobile,web",92,40,true,false
+I012,Seguridad: rotá credenciales de operadores,security_recommendation,credentials,"pyme","web",95,0,false,false
+I013,Línea PyME preaprobada para capital de trabajo,product_offer,working_capital,"pyme","mobile,web",72,55,false,false
+I014,Conciliá movimientos con tu ERP,operational_recommendation,reconciliation,"pyme","web",80,60,false,false
+I015,Comunicado: nuevo portal administrador PyME,novelty,portal_update,"pyme","web",55,0,false,false
+I016,Automatizá dispersión de pagos masivos,adoption_action,bulk_payments,"corporate","web",90,70,false,true
+I017,Tesorería: oportunidad en inversión a 7 días,financial_insight,liquidity,"corporate","web",85,75,false,true
+I018,FX: tipo de cambio favorable para importaciones,product_offer,fx,"corporate","web",78,65,false,true
+I019,Auditoría: permisos de firmantes desactualizados,security_recommendation,signers,"corporate","web",96,0,false,true
+I020,Integrá API de pagos con tu ERP,operational_recommendation,api_integration,"corporate","web",88,80,false,true
+I021,Anuncio: reporting ESG para clientes corporate,novelty,esg_reporting,"corporate","web",50,0,false,true
+I022,Retail: activá débito automático de servicios,adoption_action,autopay,"retail","mobile",84,25,false,false
+I023,PyME: reservá turno con ejecutivo de negocios,operational_recommendation,relationship,"pyme","mobile",68,30,false,false
+I024,Corporate: límites operativos próximos a vencer,operational_recommendation,limits,"corporate","web",87,60,false,true
