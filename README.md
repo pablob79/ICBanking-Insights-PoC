@@ -1,5 +1,7 @@
 # ICBanking Insights — Proof of Concept
 
+Active **PoC sandbox** for [ICBanking Insights](https://github.com/pablob79/ICBanking-Insights). Use this repo to experiment, demo, and iterate locally while the main project evolves on its own track. Ideas that mature here can later be promoted to the main repository.
+
 Local proof of concept for an **Insights & Next Best Action** module. It recommends banking insights, product offers, adoption actions, and operational suggestions using **LightFM** for ranking and a separate **business rules** layer for eligibility.
 
 > **Synthetic data only.** No real customer data, production systems, or credentials.
@@ -33,7 +35,7 @@ This PoC uses **[lightfm-next](https://pypi.org/project/lightfm-next/)** (`1.19.
 
 ## Setup and run (step by step)
 
-Run all commands from the project root (`ICBanking-Insights`).
+Run all commands from the project root (`ICBanking-Insights-PoC`).
 
 ### 1. Create virtual environment
 
