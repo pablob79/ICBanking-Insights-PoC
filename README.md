@@ -19,6 +19,7 @@ data/           Synthetic CSV datasets
 trainer/        LightFM training and recommendation helpers
 api/            FastAPI service and business rules
 backoffice/     Mock BackOffice configuration
+ui/             Demo web UI (static)
 tests/          Unit tests
 docs/           Demo script and documentation
 ```
@@ -77,7 +78,23 @@ Check health:
 curl "http://127.0.0.1:8000/health"
 ```
 
-### 5. Test recommendations
+### 5. Open demo UI
+
+With the API running, open in a browser:
+
+**http://127.0.0.1:8000/demo/**
+
+Select a demo user (Retail mobile, PyME web, Corporate web), view recommendation cards, and simulate events (`view`, `click`, `conversion`, `dismiss`).
+
+Alternative (static server on another port; CORS is enabled on the API):
+
+```bash
+python3 -m http.server 5500 --directory ui
+```
+
+Then open http://127.0.0.1:5500 and set API base URL to `http://127.0.0.1:8000`.
+
+### 6. Test recommendations
 
 Retail mobile:
 
@@ -103,7 +120,7 @@ CLI alternative (no API):
 python trainer/recommend.py
 ```
 
-### 6. Post an event
+### 7. Post an event
 
 Appends to `data/interactions.csv` (does **not** retrain automatically):
 
@@ -115,7 +132,7 @@ curl -X POST "http://127.0.0.1:8000/events" \
 
 Allowed events: `view`, `click`, `start_flow`, `conversion`, `dismiss`, `not_interested`.
 
-### 7. Retrain model
+### 8. Retrain model
 
 After new events, refresh the model:
 

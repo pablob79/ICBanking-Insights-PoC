@@ -23,7 +23,8 @@ All data is **synthetic**. No production systems or real customers are involved.
 1. Train the model: `python trainer/train.py`
 2. Start the API: `uvicorn api.main:app --reload --port 8000`
 3. Optional: `curl http://127.0.0.1:8000/health` → `{"status":"ok"}`
-4. Optional: `curl http://127.0.0.1:8000/backoffice/config` → policies and demo users
+4. Open **http://127.0.0.1:8000/demo/** for the visual demo UI
+5. Optional: `curl http://127.0.0.1:8000/backoffice/config` → policies and demo users
 
 ---
 

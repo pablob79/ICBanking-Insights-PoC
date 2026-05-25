@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ICBanking Insights — Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <p class="eyebrow">Proof of concept · synthetic data</p>
+        <h1>ICBanking Insights</h1>
+        <p class="subtitle">Next Best Action demo for Retail, PyME and Corporate</p>
+      </div>
+      <div class="header-meta">
+        <label class="api-label" for="apiBase">API base URL</label>
+        <input id="apiBase" type="url" value="http://127.0.0.1:8000" />
+        <span id="apiStatus" class="status-pill status-unknown">Checking…</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel controls">
+        <h2>Demo user</h2>
+        <div class="user-options" id="userOptions"></div>
+        <button type="button" class="btn primary" id="btnRefresh">Refresh recommendations</button>
+        <p id="lastEvent" class="hint" hidden></p>
+      </section>
+
+      <section class="panel results">
+        <div class="results-header">
+          <div>
+            <h2>Recommendations</h2>
+            <p id="userSummary" class="user-summary">Select a demo user.</p>
+          </div>
+          <span id="cardCount" class="badge">0 items</span>
+        </div>
+        <p id="errorBox" class="error" hidden></p>
+        <div id="cards" class="cards"></div>
+        <p id="emptyState" class="empty">No recommendations to show.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Events append to <code>data/interactions.csv</code>. Retrain with
+        <code>python trainer/train.py</code> and restart the API.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

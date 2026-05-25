@@ -12,6 +12,8 @@ if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from api.backoffice_service import (
@@ -120,6 +122,18 @@ app = FastAPI(
     description="Synthetic recommendations API with LightFM and business rules.",
     version="0.1.0",
 )
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+UI_DIR = _PROJECT_ROOT / "ui"
+if UI_DIR.is_dir():
+    app.mount("/demo", StaticFiles(directory=str(UI_DIR), html=True), name="demo")
 
 
 class EventRequest(BaseModel):
